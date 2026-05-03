@@ -1,0 +1,84 @@
+// =============================
+// 📦 OTHERS.JS (COMBINED SYSTEM)
+// =============================
+
+
+// =============================
+// ⚙️ CONFIG MODULE
+// =============================
+const CONFIG = {
+  appName: "AN ALIM OFFICE",
+  version: "1.0.0"
+};
+
+console.log("✅ Config Loaded");
+
+
+// =============================
+// 💾 STORAGE MODULE
+// =============================
+const Storage = {
+  save(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+  },
+
+  load(key) {
+    const data = localStorage.getItem(key);
+    return data ? JSON.parse(data) : null;
+  },
+
+  remove(key) {
+    localStorage.removeItem(key);
+  }
+};
+
+console.log("✅ Storage Ready");
+
+
+// =============================
+// 🎬 ANIMATION MODULE
+// =============================
+const Animation = {
+
+  fadeIn(element) {
+    element.style.opacity = 0;
+    element.style.display = "block";
+
+    let opacity = 0;
+    const timer = setInterval(() => {
+      opacity += 0.05;
+      element.style.opacity = opacity;
+
+      if (opacity >= 1) clearInterval(timer);
+    }, 20);
+  },
+
+  fadeOut(element) {
+    let opacity = 1;
+
+    const timer = setInterval(() => {
+      opacity -= 0.05;
+      element.style.opacity = opacity;
+
+      if (opacity <= 0) {
+        element.style.display = "none";
+        clearInterval(timer);
+      }
+    }, 20);
+  }
+
+};
+
+console.log("✅ Animation Ready");
+
+
+// =============================
+// 🌍 GLOBAL ACCESS (IMPORTANT)
+// =============================
+
+// Optional global attach (easy use)
+window.CONFIG = CONFIG;
+window.Storage = Storage;
+window.Animation = Animation;
+
+console.log("🚀 Others.js Fully Loaded");

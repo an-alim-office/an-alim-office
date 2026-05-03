@@ -1,0 +1,102 @@
+/* =============================
+   🌐 GLOBAL RESET
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* =============================
+   🌙 THEME
+============================= */
+body {
+  background: #f4f4f4;
+  color: #333;
+  transition: 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+/* =============================
+   🔝 NAVBAR
+============================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.navbar button {
+  margin-left: 8px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* =============================
+   📦 CONTAINER
+============================= */
+.container {
+  padding: 20px;
+}
+
+/* =============================
+   🧩 CARD
+============================= */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body.dark .card {
+  background: #1e1e1e;
+}
+
+/* =============================
+   🔘 BUTTON
+============================= */
+button {
+  padding: 8px 14px;
+  margin-top: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* =============================
+   🔔 NOTIFICATION
+============================= */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  z-index: 9999;
+}
