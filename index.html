@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AN ALIM OFFICE</title>
+
+  <!-- ✅ CSS (FIXED & CONFIRMED) -->
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- ✅ PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4CAF50">
+
+  <!-- ✅ Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- ✅ NAVBAR -->
+<div class="navbar">
+  <div><b>AN ALIM OFFICE</b></div>
+
+  <div>
+    <a href="#home">Home</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#analytics">Analytics</a>
+    <a href="#leaderboard">Leaderboard</a>
+    <a href="#shop">Shop</a>
+    <a href="#profile">Profile</a>
+
+    <button onclick="toggleTheme()">🌙</button>
+    <button onclick="installApp()">📲</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+</div>
+
+<!-- ✅ APP ROOT -->
+<div id="app" class="container"></div>
+
+<!-- ============================= -->
+<!-- ✅ JS FILES (CORRECT ORDER) -->
+<!-- ============================= -->
+
+<script src="js/others.js"></script>
+<script src="js/router.js"></script>
+
+<script src="js/ui.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/confetti.js"></script>
+
+<!-- ============================= -->
+<!-- ✅ SERVICE WORKER -->
+<!-- ============================= -->
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("✅ SW Registered"))
+      .catch(err => console.log("❌ SW Error:", err));
+  });
+}
+</script>
+
+</body>
+</html>
